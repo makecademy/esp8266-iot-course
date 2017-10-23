@@ -3,8 +3,8 @@
 #include "DHT.h"
 
 // WiFi credientials
-const char* ssid = "UPC2A55751";
-const char* password = "sBfj3wfEurnh";
+const char* ssid = "your_wifi_ssid";
+const char* password = "your_wifi_password";
 
 // Status
 int status = WL_IDLE_STATUS;
@@ -57,7 +57,7 @@ void loop() {
   float t = dht.readTemperature();
 
   // Build request
-  String request = "GET /dweet/for/myesp8266?temperature=";
+  String request = "GET /dweet/for/65ftiv?temperature=";
   request += String(t);
   request += "&humidity=";
   request += String(h);
